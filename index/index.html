@@ -1,0 +1,2098 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hưng Phát | Trang Sức Phong Thủy Cao Cấp</title>
+
+<meta name="description"
+content="Hưng Phát - Trang sức phong thủy cao cấp hiện đại">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+:root{
+--bg:#f7f1e8;
+--text:#2a1b1b;
+--card:rgba(255,255,255,.12);
+--gold:#f4b400;
+--red:#c1121f;
+--white:#fff;
+--dark:#111;
+}
+
+body.dark{
+--bg:#0f1115;
+--text:#f5f5f5;
+--card:rgba(20,20,25,.55);
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:var(--bg);
+color:var(--text);
+overflow-x:hidden;
+transition:.4s;
+}
+
+.bg-animation{
+position:fixed;
+inset:0;
+overflow:hidden;
+z-index:-1;
+}
+
+.bg-animation span{
+position:absolute;
+display:block;
+border-radius:50%;
+background:rgba(244,180,0,.12);
+animation:move 25s linear infinite;
+bottom:-150px;
+}
+
+.bg-animation span:nth-child(1){
+left:10%;
+width:80px;
+height:80px;
+animation-duration:20s;
+}
+
+.bg-animation span:nth-child(2){
+left:30%;
+width:120px;
+height:120px;
+animation-duration:28s;
+}
+
+.bg-animation span:nth-child(3){
+left:55%;
+width:70px;
+height:70px;
+animation-duration:18s;
+}
+
+.bg-animation span:nth-child(4){
+left:75%;
+width:140px;
+height:140px;
+animation-duration:30s;
+}
+
+.bg-animation span:nth-child(5){
+left:90%;
+width:90px;
+height:90px;
+animation-duration:24s;
+}
+
+@keyframes move{
+0%{
+transform:translateY(0) rotate(0deg);
+opacity:0;
+}
+50%{
+opacity:1;
+}
+100%{
+transform:translateY(-1200px) rotate(720deg);
+opacity:0;
+}
+}
+
+::-webkit-scrollbar{
+width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+background:linear-gradient(#c1121f,#f4b400);
+border-radius:20px;
+}
+
+.container{
+width:90%;
+max-width:1300px;
+margin:auto;
+}
+
+.topbar{
+background:linear-gradient(90deg,#8b0000,#c1121f,#f4b400);
+color:#fff;
+text-align:center;
+padding:12px;
+font-weight:600;
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:999;
+backdrop-filter:blur(18px);
+background:rgba(0,0,0,.15);
+border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+.navbar{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:18px 0;
+}
+
+.logo{
+font-family:'Cinzel',serif;
+font-size:34px;
+font-weight:700;
+color:var(--gold);
+letter-spacing:4px;
+}
+
+.menu{
+display:flex;
+gap:30px;
+align-items:center;
+}
+
+.menu a{
+color:#fff;
+text-decoration:none;
+font-weight:600;
+position:relative;
+}
+
+.menu a::after{
+content:'';
+position:absolute;
+left:0;
+bottom:-8px;
+width:0;
+height:2px;
+background:var(--gold);
+transition:.4s;
+}
+
+.menu a:hover::after{
+width:100%;
+}
+
+.right-box{
+display:flex;
+align-items:center;
+gap:14px;
+}
+
+.search-box{
+display:flex;
+overflow:hidden;
+border-radius:50px;
+background:rgba(255,255,255,.12);
+border:1px solid rgba(255,255,255,.12);
+backdrop-filter:blur(15px);
+}
+
+.search-box input{
+width:220px;
+padding:14px 18px;
+border:none;
+outline:none;
+background:transparent;
+color:#fff;
+}
+
+.search-box input::placeholder{
+color:#ddd;
+}
+
+.search-box button{
+width:55px;
+border:none;
+cursor:pointer;
+color:#fff;
+background:linear-gradient(135deg,#c1121f,#f4b400);
+}
+
+.icons{
+display:flex;
+gap:15px;
+}
+
+.icons i{
+color:#fff;
+font-size:20px;
+cursor:pointer;
+}
+
+.theme-btn{
+width:45px;
+height:45px;
+border:none;
+border-radius:50%;
+cursor:pointer;
+color:#fff;
+background:linear-gradient(135deg,#c1121f,#f4b400);
+}
+
+.hero{
+height:100vh;
+position:relative;
+overflow:hidden;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+.hero-slider{
+position:absolute;
+inset:0;
+}
+
+.slide{
+position:absolute;
+inset:0;
+background-size:cover;
+background-position:center center;
+background-repeat:no-repeat;
+opacity:0;
+transform:scale(1.15);
+filter:brightness(.65);
+transition:opacity 1.8s ease, transform 8s ease;
+}
+
+.slide.active{
+opacity:1;
+transform:scale(1);
+}
+
+.hero-overlay{
+position:absolute;
+inset:0;
+background:linear-gradient(to right, rgba(0,0,0,.75), rgba(0,0,0,.35));
+backdrop-filter:blur(2px);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+color:#fff;
+}
+
+.hero-title{
+font-family:'Cinzel',serif;
+font-size:clamp(55px,8vw,100px);
+margin-bottom:25px;
+background:linear-gradient(90deg,#fff,#ffd700,#fff);
+background-size:300%;
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+animation:shine 5s linear infinite;
+}
+
+@keyframes shine{
+0%{background-position:0%;}
+100%{background-position:300%;}
+}
+
+.hero-subtitle{
+max-width:850px;
+margin:auto;
+line-height:1.8;
+font-size:20px;
+margin-bottom:40px;
+}
+
+.btn{
+display:inline-block;
+padding:16px 40px;
+border-radius:50px;
+border:none;
+cursor:pointer;
+text-decoration:none;
+font-weight:700;
+color:#fff;
+background:linear-gradient(135deg,#c1121f,#f4b400);
+transition:.4s;
+}
+
+.btn:hover{
+transform:translateY(-5px) scale(1.03);
+box-shadow:0 10px 25px rgba(244,180,0,.35);
+}
+
+section{
+padding:100px 0;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:60px;
+}
+
+.section-title h2{
+font-family:'Cinzel',serif;
+font-size:48px;
+}
+
+.bento-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.bento-item{
+border-radius:30px;
+overflow:hidden;
+position:relative;
+min-height:260px;
+transition:.5s;
+}
+
+.bento-item img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:.5s;
+cursor:pointer;
+}
+
+.bento-item:hover{
+transform:translateY(-10px) scale(1.02);
+}
+
+.bento-item:hover img{
+transform:scale(1.08);
+}
+
+.large{
+grid-column:span 2;
+grid-row:span 2;
+}
+
+.filter-buttons{
+display:flex;
+justify-content:center;
+gap:15px;
+margin-bottom:40px;
+flex-wrap:wrap;
+}
+
+.filter-buttons button{
+padding:12px 24px;
+border:none;
+border-radius:50px;
+cursor:pointer;
+font-weight:700;
+background:#222;
+color:#fff;
+transition:.4s;
+}
+
+.filter-buttons button:hover,
+.filter-buttons button.active{
+background:linear-gradient(135deg,#c1121f,#f4b400);
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.card{
+background:var(--card);
+backdrop-filter:blur(18px);
+border-radius:30px;
+overflow:hidden;
+border:1px solid rgba(255,255,255,.08);
+transition:.5s;
+position:relative;
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.02);
+box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+.badge{
+position:absolute;
+top:18px;
+left:18px;
+padding:8px 16px;
+border-radius:50px;
+background:linear-gradient(135deg,#c1121f,#f4b400);
+color:#fff;
+font-size:13px;
+font-weight:700;
+z-index:5;
+}
+
+.card img{
+width:100%;
+height:340px;
+object-fit:cover;
+transition:.5s;
+}
+
+.card:hover img{
+transform:scale(1.05);
+}
+
+.card-content{
+padding:25px;
+}
+
+.price{
+margin:15px 0;
+color:var(--red);
+font-size:24px;
+font-weight:700;
+}
+
+.rating{
+color:#f4b400;
+margin-top:10px;
+}
+
+.blog-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+}
+
+.blog-card{
+background:var(--card);
+border-radius:30px;
+overflow:hidden;
+backdrop-filter:blur(18px);
+}
+
+.blog-card img{
+width:100%;
+height:240px;
+object-fit:cover;
+}
+
+.blog-content{
+padding:25px;
+}
+
+.blog-link{
+display:inline-block;
+margin-top:18px;
+color:var(--red);
+text-decoration:none;
+font-weight:700;
+}
+
+.contact-wrapper{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+.contact-info{
+display:flex;
+flex-direction:column;
+gap:25px;
+}
+
+.contact-box{
+display:flex;
+gap:18px;
+align-items:center;
+padding:25px;
+border-radius:25px;
+background:var(--card);
+backdrop-filter:blur(18px);
+transition:.4s;
+}
+
+.contact-box:hover{
+transform:translateX(8px);
+}
+
+.contact-icon{
+width:65px;
+height:65px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#fff;
+font-size:24px;
+background:linear-gradient(135deg,#c1121f,#f4b400);
+}
+
+.contact-form{
+background:var(--card);
+padding:40px;
+border-radius:30px;
+backdrop-filter:blur(18px);
+}
+
+.form-group{
+margin-bottom:20px;
+}
+
+.form-group input,
+.form-group textarea{
+width:100%;
+padding:16px;
+border:none;
+outline:none;
+border-radius:18px;
+background:rgba(255,255,255,.08);
+color:var(--text);
+}
+
+textarea{
+min-height:140px;
+resize:none;
+}
+
+.success-message{
+display:none;
+margin-top:20px;
+padding:15px;
+border-radius:15px;
+background:#1b5e20;
+color:#fff;
+font-weight:700;
+text-align:center;
+}
+
+.cart-sidebar{
+position:fixed;
+top:0;
+right:-420px;
+width:400px;
+height:100vh;
+background:#111;
+color:#fff;
+z-index:9999;
+padding:30px;
+transition:.5s;
+overflow-y:auto;
+}
+
+.cart-sidebar.active{
+right:0;
+}
+
+.cart-top{
+display:flex;
+align-items:center;
+justify-content:space-between;
+margin-bottom:30px;
+}
+
+.back-btn{
+border:none;
+padding:10px 18px;
+border-radius:50px;
+cursor:pointer;
+color:#fff;
+font-weight:600;
+background:linear-gradient(135deg,#c1121f,#f4b400);
+}
+
+.cart-item{
+margin-bottom:20px;
+padding-bottom:20px;
+border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+.lightbox{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.9);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:99999;
+}
+
+.lightbox img{
+max-width:90%;
+max-height:90%;
+border-radius:20px;
+}
+
+.newsletter{
+padding:80px 20px;
+background:linear-gradient(135deg,#111,#2a1b1b);
+color:#fff;
+}
+
+#member{
+scroll-margin-top:110px;
+}
+
+.newsletter h2{
+font-family:'Cinzel',serif;
+font-size:42px;
+max-width:760px;
+margin:0 auto 20px;
+text-align:center;
+line-height:1.2;
+letter-spacing:1px;
+}
+
+.newsletter-intro{
+max-width:760px;
+margin:0 auto;
+text-align:center;
+line-height:1.8;
+}
+
+.member-wrapper{
+max-width:1150px;
+margin:45px auto 0;
+display:grid;
+grid-template-columns:.9fr 1.1fr;
+gap:28px;
+align-items:start;
+}
+
+.member-info,
+.member-form-card{
+padding:35px;
+border-radius:30px;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(18px);
+}
+
+.member-info{
+text-align:left;
+}
+
+.member-info h3,
+.member-form-card h3{
+font-size:28px;
+margin-bottom:18px;
+}
+
+.member-info p,
+.member-form-card p{
+color:rgba(255,255,255,.82);
+line-height:1.8;
+}
+
+.member-benefits{
+display:grid;
+gap:16px;
+margin-top:28px;
+}
+
+.benefit-item{
+display:flex;
+gap:16px;
+align-items:flex-start;
+padding:18px;
+border-radius:22px;
+background:rgba(255,255,255,.06);
+}
+
+.benefit-item i{
+width:48px;
+height:48px;
+flex-shrink:0;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+font-size:18px;
+color:#111;
+background:linear-gradient(135deg,#f4b400,#ffd86b);
+}
+
+.benefit-item strong{
+display:block;
+margin-bottom:6px;
+font-size:17px;
+}
+
+.member-form-card{
+text-align:left;
+}
+
+.member-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:16px;
+margin-top:25px;
+}
+
+.member-grid .form-group{
+margin-bottom:0;
+}
+
+.member-grid .full{
+grid-column:1 / -1;
+}
+
+.member-form-card input,
+.member-form-card select,
+.member-form-card textarea{
+width:100%;
+padding:16px 18px;
+border:none;
+outline:none;
+border-radius:18px;
+background:rgba(255,255,255,.1);
+color:#fff;
+font:inherit;
+}
+
+.member-form-card input::placeholder,
+.member-form-card textarea::placeholder{
+color:rgba(255,255,255,.68);
+}
+
+.member-form-card select{
+appearance:none;
+}
+
+.member-form-card option{
+color:#111;
+}
+
+.member-check{
+display:flex;
+align-items:flex-start;
+gap:12px;
+font-size:15px;
+line-height:1.6;
+color:rgba(255,255,255,.82);
+}
+
+.member-check input{
+width:18px;
+height:18px;
+margin-top:3px;
+accent-color:var(--gold);
+}
+
+.member-note{
+margin-top:16px;
+font-size:14px;
+color:rgba(255,255,255,.65);
+}
+
+.member-form-card .success-message{
+background:#2e7d32;
+}
+
+footer{
+text-align:center;
+padding:35px;
+background:#111;
+color:#fff;
+}
+
+.top-btn{
+position:fixed;
+right:20px;
+bottom:20px;
+width:55px;
+height:55px;
+border:none;
+border-radius:50%;
+background:linear-gradient(135deg,#c1121f,#f4b400);
+color:#fff;
+font-size:20px;
+cursor:pointer;
+z-index:999;
+}
+
+@media(max-width:991px){
+.bento-grid{
+grid-template-columns:1fr 1fr;
+}
+.contact-wrapper{
+grid-template-columns:1fr;
+}
+}
+
+@media(max-width:768px){
+.menu{
+display:none;
+}
+.search-box{
+display:none;
+}
+.bento-grid{
+grid-template-columns:1fr;
+}
+.large{
+grid-column:span 1;
+}
+.hero-title{
+font-size:52px;
+}
+.cart-sidebar{
+width:100%;
+}
+.member-wrapper,
+.member-grid{
+grid-template-columns:1fr;
+}
+.member-info,
+.member-form-card{
+padding:28px 22px;
+}
+}
+
+</style>
+</head>
+<body>
+
+<div class="bg-animation">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<div class="topbar">
+✨ Freeship toàn quốc cho đơn hàng từ 2.000.000đ
+</div>
+
+<header>
+<div class="container navbar">
+
+<div class="logo">HƯNG PHÁT</div>
+
+<nav class="menu">
+<a href="#home">Trang chủ</a>
+<a href="#about">Giới thiệu</a>
+<a href="#products">Sản phẩm</a>
+<a href="#blog">Blog</a>
+<a href="#member">Thành viên</a>
+<a href="#contact">Liên hệ</a>
+</nav>
+
+<div class="right-box">
+
+<button class="theme-btn" id="themeToggle">
+
+<span id="themeIcon">
+🌙
+</span>
+
+</button>
+
+<div class="search-box">
+<input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm..." onkeyup="searchProducts()">
+<button>
+<i class="fa-solid fa-magnifying-glass"></i>
+</button>
+</div>
+
+<div class="icons">
+<i class="fa-solid fa-bag-shopping" id="cartBtn"></i>
+</div>
+
+</div>
+</div>
+</header>
+
+<section class="hero" id="home">
+
+<div class="hero-slider">
+
+<div class="slide active"
+style="background-image:url('images/vong1.jpg');">
+</div>
+
+<div class="slide"
+style="background-image:url('images/da1.jpg');">
+</div>
+
+<div class="slide"
+style="background-image:url('images/tram.jpg');">
+</div>
+
+</div>
+
+<div class="hero-overlay"></div>
+
+<div class="container hero-content">
+<h1 class="hero-title">HƯNG PHÁT</h1>
+<p class="hero-subtitle">
+Trang sức phong thủy cao cấp mang tinh thần hiện đại.
+</p>
+<a href="#products" class="btn">
+Khám phá bộ sưu tập
+</a>
+</div>
+</section>
+
+<section id="about">
+
+<div class="container">
+
+<div class="section-title">
+<h2>GIỚI THIỆU HƯNG PHÁT</h2>
+</div>
+
+<div style="
+max-width:900px;
+margin:auto;
+text-align:center;
+margin-bottom:60px;
+line-height:2;
+font-size:18px;
+">
+
+<p>
+Hưng Phát là thương hiệu chuyên cung cấp trang sức phong thủy,
+đá quý năng lượng và trầm hương cao cấp mang phong cách hiện đại.
+</p>
+
+<br>
+
+<p>
+Chúng tôi mong muốn mang đến những sản phẩm không chỉ đẹp về thẩm mỹ
+mà còn chứa đựng giá trị phong thủy, sự bình an và nguồn năng lượng tích cực
+cho khách hàng.
+</p>
+
+</div>
+
+<div class="bento-grid">
+
+<div class="bento-item large">
+<img onclick="openImage(this.src)"
+src="images/da1.jpg">
+</div>
+
+<div class="bento-item">
+<img onclick="openImage(this.src)"
+src="images/vong1.jpg">
+</div>
+
+<div class="bento-item">
+<img onclick="openImage(this.src)"
+src="images/tram1.jpg">
+</div>
+
+<div class="bento-item">
+<img onclick="openImage(this.src)"
+src="images/tram2.jpg">
+</div>
+
+<div class="bento-item">
+<img onclick="openImage(this.src)"
+src="images/da2.jpg">
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="products">
+<div class="container">
+<div class="section-title">
+<h2>SẢN PHẨM PHONG THỦY CAO CẤP</h2>
+</div>
+
+<div class="filter-buttons">
+<button class="active"
+onclick="filterProducts('all',event)">
+Tất cả
+</button>
+
+<button onclick="filterProducts('phongthuy',event)">
+Trang sức phong thủy
+</button>
+
+<button onclick="filterProducts('daquy',event)">
+Đá phong thủy
+</button>
+
+<button onclick="filterProducts('tramhuong',event)">
+Trầm hương
+</button>
+</div>
+
+<div class="products">
+
+<div class="card product-card"
+data-category="phongthuy">
+<div class="badge">BEST SELLER</div>
+<img src="images/cach-chon-vong-tay-phong-thuy-hut-tai-loc-800x800.png">
+<div class="card-content">
+<h3>Vòng Tay Tài Lộc Phong Thủy</h3>
+<div class="rating">★★★★★</div>
+<div class="price">5.900.000đ</div>
+<p>
+Mang ý nghĩa chiêu tài, thu hút may mắn và năng lượng tích cực.
+</p>
+<button class="btn"
+onclick="addToCart('Vòng Tay Tài Lộc Phong Thủy',5900000)">
+Thêm giỏ hàng
+</button>
+</div>
+</div>
+
+<div class="card product-card"
+data-category="daquy">
+<div class="badge">NEW</div>
+<img src="images/thach-anh-tim-nang-luong-manh-min.jpg">
+<div class="card-content">
+<h3>Đá Thạch Anh Năng Lượng</h3>
+<div class="rating">★★★★★</div>
+<div class="price">8.500.000đ</div>
+<p>
+Tăng cường năng lượng tích cực và hỗ trợ cân bằng cảm xúc.
+</p>
+<button class="btn"
+onclick="addToCart('Đá Thạch Anh Năng Lượng',8500000)">
+Thêm giỏ hàng
+</button>
+</div>
+</div>
+
+<div class="card product-card"
+data-category="tramhuong">
+<div class="badge">LIMITED</div>
+<img src="images/tram.jpg">
+<div class="card-content">
+<h3>Trầm Hương Cao Cấp</h3>
+<div class="rating">★★★★★</div>
+<div class="price">12.900.000đ</div>
+<p>
+Biểu tượng bình an, thư thái và nâng tầm phong cách.
+</p>
+<button class="btn"
+onclick="addToCart('Trầm Hương Cao Cấp',12900000)">
+Thêm giỏ hàng
+</button>
+</div>
+</div>
+
+<div class="card product-card"
+data-category="phongthuy">
+<img src="images/vongtaotyhuu.jpg">
+<div class="card-content">
+<h3>Charm Phong Thủy Tỳ Hưu</h3>
+<div class="rating">★★★★★</div>
+<div class="price">3.900.000đ</div>
+<p>
+Charm chiêu tài giúp thu hút vận may và tài lộc cho chủ nhân.
+</p>
+<button class="btn"
+onclick="addToCart('Charm Phong Thủy Tỳ Hưu',3900000)">
+Thêm giỏ hàng
+</button>
+</div>
+</div>
+
+<div class="card product-card"
+data-category="daquy">
+<img src="images/phat-ban-menh-thien-thu-thien-nhan-da-obdisian.jpg">
+<div class="card-content">
+<h3>Đá Obsidian Hộ Mệnh</h3>
+<div class="rating">★★★★★</div>    
+<div class="price">6.200.000đ</div>
+<p>
+
+Đá bảo vệ tinh thần và xua tan nguồn năng lượng tiêu cực.
+</p>
+<button class="btn"
+onclick="addToCart('Đá Obsidian Hộ Mệnh',6200000)">
+Thêm giỏ hàng
+</button>
+</div>
+</div>
+
+<div class="card product-card"
+data-category="tramhuong">
+<img src="images/IMG_2024 (1).jpg">
+
+<div class="card-content">
+<h3>Vòng Trầm Thiền Định</h3>
+<div class="rating">★★★★★</div>
+<div class="price">7.500.000đ</div>
+<p>
+Mang hương thơm nhẹ nhàng giúp thư giãn và an yên tinh thần.
+</p>
+<button class="btn"
+onclick="addToCart('Vòng Trầm Thiền Định',7500000)">
+Thêm giỏ hàng
+</button>
+</div>
+</div>
+
+<div class="card product-card"
+data-category="phongthuy">
+<img src="images/DSCF3490.jpg">
+<div class="card-content">
+<h3>Lu Thống Chiêu Tài</h3>
+<div class="rating">★★★★★</div>
+<div class="price">4.800.000đ</div>
+<p>
+Vật phẩm phong thủy mang biểu tượng thu hút tài vận.
+</p>
+<button class="btn"
+onclick="addToCart('Lu Thống Chiêu Tài',4800000)">
+Thêm giỏ hàng
+</button>
+</div>
+</div>
+
+<div class="card product-card"
+data-category="daquy">
+<img src="images/images (1).jpg">
+<div class="card-content">
+<h3>Đá Mắt Hổ Hoàng Kim</h3>
+<div class="rating">★★★★★</div>
+<div class="price">9.900.000đ</div>
+<p>
+Đá tượng trưng cho sự mạnh mẽ, quyền lực và thành công.
+</p>
+<button class="btn"
+onclick="addToCart('Đá Mắt Hổ Hoàng Kim',9900000)">
+Thêm giỏ hàng
+</button>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="blog">
+<div class="container">
+<div class="section-title">
+<h2>BLOG PHONG THỦY</h2>
+</div>
+
+<div class="blog-grid">
+
+<!-- BLOG 1 -->
+
+<div class="blog-card">
+
+<img src="images/images (2).jpg">
+
+<div class="blog-content">
+
+<h3>
+Cách chọn đá phong thủy theo mệnh
+</h3>
+
+<p>
+Tăng năng lượng tích cực và thu hút tài lộc cho từng bản mệnh.
+</p>
+
+<a
+href="https://vinhomes.vn/vi/cach-chon-da-phong-thuy-theo-tuoi-va-menh"
+target="_blank"
+class="blog-link">
+
+Xem bài viết →
+
+</a>
+
+</div>
+
+</div>
+
+<!-- BLOG 2 -->
+
+<div class="blog-card">
+
+<img src="images/2021_11_19___1637306054___y-nghia-cua-tram-huong-trong-doi-song-va-phong-thuy-edited.jpg">
+
+<div class="blog-content">
+
+<h3>
+Ý nghĩa của trầm hương trong phong thủy
+</h3>
+
+<p>
+Biểu tượng của sự bình an, may mắn và năng lượng tích cực.
+</p>
+
+<a
+href="https://tramdongduong.com/kham-pha-tac-dung-cua-tram-huong-trong-phong-thuy-n98495.html"
+target="_blank"
+class="blog-link">
+
+Xem bài viết →
+
+</a>
+
+</div>
+
+</div>
+
+<!-- BLOG 3 -->
+
+<div class="blog-card">
+
+<img src="images/vong-da-thach-anh-toc-do-hong-mix-dzi.jpg">
+
+<div class="blog-content">
+
+<h3>
+Chọn vòng đá phong thủy đúng cách
+</h3>
+
+<p>
+Hướng dẫn chọn vòng đá phong thủy theo ngũ hành và bản mệnh.
+</p>
+
+<a
+href="https://tinhlamjw.com/chon-vong-da-phong-thuy-dung-cach/"
+target="_blank"
+class="blog-link">
+
+Xem bài viết →
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+<div class="section-title">
+<h2>LIÊN HỆ TƯ VẤN</h2>
+</div>
+
+<div class="contact-wrapper">
+
+<div class="contact-info">
+
+<div class="contact-box">
+<div class="contact-icon">
+<i class="fa-solid fa-phone"></i>
+</div>
+<div>
+<h3>Hotline</h3>
+<p>1900 29 29 17</p>
+</div>
+</div>
+
+<div class="contact-box">
+<div class="contact-icon">
+<i class="fa-solid fa-envelope"></i>
+</div>
+<div>
+<h3>Email</h3>
+<p>contact@hungphat.vn</p>
+</div>
+</div>
+
+<div class="contact-box">
+<div class="contact-icon">
+<i class="fa-solid fa-location-dot"></i>
+</div>
+<div>
+<h3>Showroom</h3>
+<p>Đồng Nai</p>
+</div>
+</div>
+
+</div>
+
+<div class="contact-form">
+<form id="contactForm">
+
+<div class="form-group">
+<input type="text" placeholder="Họ và tên" required>
+</div>
+
+<div class="form-group">
+<input type="email" placeholder="Email" required>
+</div>
+
+<div class="form-group">
+<input type="text" placeholder="Số điện thoại" required>
+</div>
+
+<div class="form-group">
+<textarea placeholder="Nội dung cần tư vấn"></textarea>
+</div>
+
+<button class="btn">Gửi đăng ký</button>
+
+<div class="success-message" id="successMessage">
+✅ Gửi đăng ký thành công!
+</div>
+
+</form>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="newsletter" id="member">
+<<h2 style="font-family: Arial, Helvetica, sans-serif;">ĐĂNG KÝ THÀNH VIÊN</h2>
+
+<p class="newsletter-intro">
+Tham gia chương trình thành viên để nhận ưu đãi riêng, cập nhật bộ sưu tập mới
+và được đội ngũ Hưng Phát chăm sóc nhanh hơn.
+</p>
+
+<div class="member-wrapper">
+<div class="member-info">
+<h3>Quyền lợi thành viên</h3>
+<p>
+Đăng ký miễn phí ngay hôm nay để nhận thông tin sớm về sản phẩm mới,
+chính sách ưu đãi theo hạng thành viên và quà tặng vào những dịp đặc biệt.
+</p>
+
+<div class="member-benefits">
+<div class="benefit-item">
+<i class="fa-solid fa-gift"></i>
+<div>
+<strong>Ưu đãi dành riêng</strong>
+<p>Nhận mã giảm giá, quà tặng sinh nhật và chương trình tri ân định kỳ.</p>
+</div>
+</div>
+
+<div class="benefit-item">
+<i class="fa-solid fa-gem"></i>
+<div>
+<strong>Cập nhật bộ sưu tập mới</strong>
+<p>Ưu tiên xem trước các mẫu vòng đá, đá quý và trầm hương mới nhất.</p>
+</div>
+</div>
+
+<div class="benefit-item">
+<i class="fa-solid fa-headset"></i>
+<div>
+<strong>Tư vấn nhanh hơn</strong>
+<p>Được hỗ trợ lựa chọn sản phẩm phù hợp với nhu cầu và mệnh phong thủy.</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="member-form-card">
+<h3>Thông tin đăng ký</h3>
+<p>Điền thông tin bên dưới, Hưng Phát sẽ liên hệ xác nhận trong thời gian sớm nhất.</p>
+
+<form id="memberForm">
+<div class="member-grid">
+<div class="form-group">
+<input type="text" placeholder="Họ và tên" required>
+</div>
+
+<div class="form-group">
+<input type="tel" placeholder="Số điện thoại" required>
+</div>
+
+<div class="form-group">
+<input type="email" placeholder="Email" required>
+</div>
+
+<div class="form-group">
+<input type="date" required>
+</div>
+
+<div class="form-group full">
+<select required>
+<option value="" selected disabled>Quan tâm đến sản phẩm</option>
+<option value="vong-da">Vòng đá phong thủy</option>
+<option value="da-quy">Đá quý năng lượng</option>
+<option value="tram-huong">Trầm hương cao cấp</option>
+<option value="tu-van">Tư vấn theo mệnh</option>
+</select>
+</div>
+
+<div class="form-group full">
+<textarea placeholder="Ghi chú thêm nếu bạn muốn được tư vấn riêng"></textarea>
+</div>
+
+<div class="form-group full">
+<label class="member-check">
+<input type="checkbox" required>
+<span>Tôi đồng ý nhận thông tin ưu đãi và tư vấn từ Hưng Phát.</span>
+</label>
+</div>
+</div>
+
+<button class="btn" type="submit">Đăng ký thành viên</button>
+
+<div class="success-message" id="memberSuccessMessage">
+✅ Đăng ký thành viên thành công! Hưng Phát sẽ sớm liên hệ với bạn.
+</div>
+
+<p class="member-note">
+Thông tin của bạn được sử dụng để chăm sóc khách hàng và cập nhật ưu đãi phù hợp.
+</p>
+</form>
+</div>
+</div>
+</section>
+
+<div class="cart-sidebar" id="cartSidebar">
+
+<div class="cart-top">
+
+<h2>
+🛒 Giỏ hàng của bạn
+</h2>
+
+<button class="back-btn"
+onclick="closeCart()">
+← Đóng
+</button>
+
+</div>
+
+<div id="cartItems"></div>
+
+<div style="
+margin-top:25px;
+padding-top:20px;
+border-top:1px solid rgba(255,255,255,.15);
+">
+
+<h3 style="
+display:flex;
+justify-content:space-between;
+margin-bottom:25px;
+">
+
+<span>Tổng cộng:</span>
+
+<span id="cartTotal">
+0đ
+</span>
+
+</h3>
+
+<button class="btn"
+style="width:100%; font-size:17px;"
+onclick="checkout()">
+Thanh toán ngay
+</button>
+
+<div id="checkoutMessage"
+style="
+display:none;
+margin-top:20px;
+padding:18px;
+border-radius:18px;
+background:#1b5e20;
+text-align:center;
+font-weight:700;
+line-height:1.8;
+">
+
+✅ Đặt hàng thành công!
+<br>
+Hưng Phát sẽ liên hệ xác nhận đơn hàng.
+
+</div>
+
+</div>
+
+</div>
+
+<div class="lightbox" id="lightbox" onclick="closeImage()">
+<img id="lightboxImg">
+</div>
+
+<button class="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+<i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<footer>
+© 2026 Hưng Phát — Premium Feng Shui Jewelry
+</footer>
+
+<script>
+
+window.onload = function(){
+
+/* =========================
+DARK MODE
+========================= */
+
+const themeToggle = document.getElementById("themeToggle");
+const themeIcon = document.getElementById("themeIcon");
+
+if(themeToggle){
+
+themeToggle.addEventListener("click", function(){
+
+document.body.classList.toggle("dark");
+
+if(document.body.classList.contains("dark")){
+themeIcon.innerHTML = "☀️";
+}
+else{
+themeIcon.innerHTML = "🌙";
+}
+
+});
+
+}
+
+/* =========================
+SLIDER
+========================= */
+
+const slides = document.querySelectorAll(".slide");
+let currentSlide = 0;
+
+function autoSlide(){
+
+slides[currentSlide].classList.remove("active");
+
+currentSlide = (currentSlide + 1) % slides.length;
+
+slides[currentSlide].classList.add("active");
+
+}
+
+setInterval(autoSlide,4000);
+
+/* =========================
+CART SYSTEM
+========================= */
+
+let cart = [];
+
+const cartBtn = document.getElementById("cartBtn");
+const cartSidebar = document.getElementById("cartSidebar");
+
+if(cartBtn){
+
+cartBtn.addEventListener("click", function(){
+cartSidebar.classList.toggle("active");
+});
+
+}
+
+window.closeCart = function(){
+cartSidebar.classList.remove("active");
+}
+
+window.addToCart = function(name,price){
+
+cart.push({name,price});
+
+renderCart();
+
+cartSidebar.classList.add("active");
+
+}
+
+window.removeItem = function(index){
+
+cart.splice(index,1);
+
+renderCart();
+
+}
+
+function renderCart(){
+
+let html = "";
+let total = 0;
+
+if(cart.length === 0){
+
+html = `
+<div style="text-align:center;padding:40px 0;opacity:.8;">
+🛍️<br><br>
+Chưa có sản phẩm nào
+</div>
+`;
+
+}
+
+else{
+
+cart.forEach((item,index)=>{
+
+total += item.price;
+
+html += `
+<div class="cart-item">
+
+<div style="display:flex;justify-content:space-between;align-items:center;gap:15px;">
+
+<div>
+<h4 style="margin-bottom:10px;">${item.name}</h4>
+<div style="color:#f4b400;font-weight:700;">
+${item.price.toLocaleString()}đ
+</div>
+</div>
+
+<button onclick="removeItem(${index})"
+style="border:none;width:40px;height:40px;border-radius:50%;background:#c1121f;color:#fff;cursor:pointer;font-size:18px;">
+×
+</button>
+
+</div>
+</div>
+`;
+
+});
+
+}
+
+document.getElementById("cartItems").innerHTML = html;
+document.getElementById("cartTotal").innerText = total.toLocaleString()+"đ";
+
+}
+
+window.checkout = function(){
+
+if(cart.length === 0){
+alert("Vui lòng chọn sản phẩm trước khi thanh toán!");
+return;
+}
+
+document.getElementById("checkoutMessage").style.display = "block";
+
+setTimeout(function(){
+
+document.getElementById("checkoutMessage").style.display = "none";
+
+cart = [];
+
+renderCart();
+
+closeCart();
+
+},3000);
+
+}
+
+/* =========================
+LIGHTBOX
+========================= */
+
+window.openImage = function(src){
+
+document.getElementById("lightbox").style.display = "flex";
+document.getElementById("lightboxImg").src = src;
+
+}
+
+window.closeImage = function(){
+
+document.getElementById("lightbox").style.display = "none";
+
+}
+
+/* =========================
+CONTACT FORM
+========================= */
+
+const contactForm = document.getElementById("contactForm");
+
+if(contactForm){
+
+contactForm.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+document.getElementById("successMessage").style.display = "block";
+
+this.reset();
+
+});
+
+}
+
+const memberForm =
+document.getElementById("memberForm");
+
+if(memberForm){
+
+memberForm.addEventListener(
+"submit",
+async function(e){
+
+e.preventDefault();
+
+const inputs =
+this.querySelectorAll(
+"input, select, textarea"
+);
+
+const data = {
+
+fullName: inputs[0].value,
+phone: inputs[1].value,
+email: inputs[2].value,
+birthday: inputs[3].value,
+product: inputs[4].value,
+note: inputs[5].value
+
+};
+
+try{
+
+await fetch(
+"https://script.google.com/macros/s/AKfycbz2hrtSXk-c8Zm2MFcb_bHpccP7wVtlg3E52DEiD8VWBRlqB9Mt8edD1X4DE2A0t1fL/exec",
+{
+method:"POST",
+mode:"no-cors",
+headers:{
+"Content-Type":"application/json"
+},
+body:JSON.stringify(data)
+}
+);
+
+document.getElementById(
+"memberSuccessMessage"
+).style.display = "block";
+
+document.getElementById(
+"memberSuccessMessage"
+).innerHTML =
+"✅ Đăng ký thành công!";
+
+this.reset();
+
+}catch(error){
+
+alert("Có lỗi xảy ra!");
+
+}
+
+});
+
+}
+/* =========================
+FILTER PRODUCTS
+========================= */
+
+window.filterProducts = function(category,event){
+
+const cards = document.querySelectorAll(".product-card");
+const buttons = document.querySelectorAll(".filter-buttons button");
+
+buttons.forEach(btn=>{
+btn.classList.remove("active");
+});
+
+event.target.classList.add("active");
+
+cards.forEach(card=>{
+
+if(category === "all"){
+card.style.display = "block";
+}
+else if(card.dataset.category === category){
+card.style.display = "block";
+}
+else{
+card.style.display = "none";
+}
+
+});
+
+}
+
+/* =========================
+SEARCH
+========================= */
+
+window.searchProducts = function(){
+
+let input = document.getElementById("searchInput")
+.value.toLowerCase();
+
+let cards = document.querySelectorAll(".product-card");
+
+cards.forEach(card=>{
+
+let title = card.querySelector("h3")
+.innerText.toLowerCase();
+
+if(title.includes(input)){
+card.style.display = "block";
+}
+else{
+card.style.display = "none";
+}
+
+});
+
+}
+
+}
+
+</script>
+<!-- Code injected by live-server -->
+<script>
+// <![CDATA[ <-- For SVG support
+if ('WebSocket' in window) {
+(function () {
+function refreshCSS() {
+var sheets = [].slice.call(document.getElementsByTagName("link"));
+var head = document.getElementsByTagName("head")[0];
+for (var i = 0; i < sheets.length; ++i) {
+var elem = sheets[i];
+var parent = elem.parentElement || head;
+parent.removeChild(elem);
+var rel = elem.rel;
+if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+}
+parent.appendChild(elem);
+}
+}
+var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+var address = protocol + window.location.host + window.location.pathname + '/ws';
+var socket = new WebSocket(address);
+socket.onmessage = function (msg) {
+if (msg.data == 'reload') window.location.reload();
+else if (msg.data == 'refreshcss') refreshCSS();
+};
+if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+console.log('Live reload enabled.');
+sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+}
+})();
+}
+else {
+console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+}
+// ]]>
+</script>
+<!-- FLOATING CONTACT -->
+<style>
+
+.floating-contact{
+position:fixed;
+right:20px;
+bottom:90px;
+display:flex;
+flex-direction:column;
+gap:15px;
+z-index:99999;
+}
+
+.float-item{
+position:relative;
+display:flex;
+align-items:center;
+}
+
+.float-btn{
+width:65px;
+height:65px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+text-decoration:none;
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+transition:0.3s;
+animation:pulse 2s infinite;
+}
+
+.float-btn:hover{
+transform:scale(1.1);
+}
+
+.zalo-btn{
+background:#0084ff;
+}
+
+.phone-btn{
+background:linear-gradient(135deg,#c1121f,#f4b400);
+color:#fff;
+font-size:28px;
+}
+
+.hotline-text{
+position:absolute;
+right:80px;
+background:#fff;
+color:#111;
+padding:10px 18px;
+border-radius:30px;
+font-size:14px;
+font-weight:700;
+white-space:nowrap;
+box-shadow:0 5px 20px rgba(0,0,0,.15);
+opacity:0;
+transform:translateX(20px);
+transition:0.3s;
+}
+
+.float-item:hover .hotline-text{
+opacity:1;
+transform:translateX(0);
+}
+
+@keyframes pulse{
+
+0%{
+box-shadow:0 0 0 0 rgba(244,180,0,.5);
+}
+
+70%{
+box-shadow:0 0 0 18px rgba(244,180,0,0);
+}
+
+100%{
+box-shadow:0 0 0 0 rgba(244,180,0,0);
+}
+
+}
+
+@media(max-width:768px){
+
+.floating-contact{
+right:15px;
+bottom:80px;
+}
+
+.float-btn{
+width:58px;
+height:58px;
+}
+
+.hotline-text{
+display:none;
+}
+
+}
+
+</style>
+
+<div class="floating-contact">
+
+<div class="float-item">
+
+<span class="hotline-text">
+Chat Zalo
+</span>
+
+<a
+href="https://zalo.me/g/pkjavbw7nrwcarpxaij7"
+target="_blank"
+class="float-btn zalo-btn">
+
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg"
+alt="Zalo"
+style="width:34px;height:34px;">
+
+</a>
+
+</div>
+
+<div class="float-item">
+
+<span class="hotline-text">
+Hotline: 1900 29 29 17
+</span>
+
+<a
+href="tel:1900292917"
+class="float-btn phone-btn">
+
+<i class="fa-solid fa-phone"></i>
+
+</a>
+
+</div>
+
+</div>
+<script>
+
+document
+.getElementById("memberForm")
+.addEventListener(
+"submit",
+function(e){
+
+e.preventDefault();
+
+const inputs =
+this.querySelectorAll(
+"input, select, textarea"
+);
+
+const data = {
+
+fullName: inputs[0].value,
+phone: inputs[1].value,
+email: inputs[2].value,
+birthday: inputs[3].value,
+product: inputs[4].value,
+note: inputs[5].value
+
+};
+
+fetch(
+"https://script.google.com/macros/s/AKfycbxHDhJK3bisl9VL4F6wzdezpdoPMLW36SC9rtBV_xInKYiPpzVffNsphPYWNN8QhmM/exec",
+{
+method:"POST",
+mode:"no-cors",
+headers:{
+"Content-Type":"application/json"
+},
+body:JSON.stringify(data)
+}
+);
+
+document
+.getElementById(
+"memberSuccessMessage"
+)
+.style.display = "block";
+
+document
+.getElementById(
+"memberSuccessMessage"
+)
+.innerHTML =
+"✅ Đăng ký thành công!";
+
+this.reset();
+
+}
+);
+
+</script>
+</body>
+</html>
